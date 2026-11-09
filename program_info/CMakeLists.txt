@@ -8,23 +8,26 @@ if(UNIX)
     endif()
 endif()
 
-set(Launcher_CommonName "PrismLauncher")
-set(Launcher_DisplayName "Prism Launcher (Cracked)")
-set(Launcher_AppID "org.prismlauncher.PrismLauncher")
-set(Launcher_Domain "prismlauncher.org")
+# =========================================================================
+# 🐾 CONFIGURAREA BRANDINGULUI PERSONALIZAT (FURAWWNCHER)
+# =========================================================================
+set(Launcher_CommonName "furawwncher")
+set(Launcher_DisplayName "Furawwncher")
+set(Launcher_AppID "org.furawwncher.Furawwncher")
+set(Launcher_Domain "furawwncher.org")
 set(Launcher_Git "https://github.com/Diegiwg/PrismLauncher-Cracked")
 
 set(Launcher_Name "${Launcher_CommonName}" PARENT_SCOPE)
 set(Launcher_DisplayName "${Launcher_DisplayName}" PARENT_SCOPE)
-set(Launcher_ENVName "PRISMLAUNCHER" PARENT_SCOPE)
+set(Launcher_ENVName "FURAWWNCHER" PARENT_SCOPE)
 set(Launcher_Domain "${Launcher_Domain}" PARENT_SCOPE)
 set(Launcher_Git "${Launcher_Git}" PARENT_SCOPE)
 
 set(Launcher_SVGFileName "${Launcher_AppID}.svg")
-set(Launcher_Copyright "© 2022-2026 Prism Launcher Contributors\\n© 2021-2022 PolyMC Contributors\\n© 2012-2021 MultiMC Contributors")
-set(Launcher_Copyright_Mac "© 2022-2026 Prism Launcher Contributors, © 2021-2022 PolyMC Contributors and © 2012-2021 MultiMC Contributors" PARENT_SCOPE)
+set(Launcher_Copyright "© 2026 Furawwncher Contributors\\n© 2022-2026 Prism Launcher Contributors")
+set(Launcher_Copyright_Mac "© 2026 Furawwncher Contributors and © 2022-2026 Prism Launcher Contributors" PARENT_SCOPE)
 set(Launcher_Copyright "${Launcher_Copyright}" PARENT_SCOPE)
-set(Launcher_UserAgent "${Launcher_CommonName}/${Launcher_VERSION_NAME}" PARENT_SCOPE)
+set(Launcher_UserAgent "${Launcher_DisplayName}/${Launcher_VERSION_NAME}" PARENT_SCOPE)
 set(Launcher_ConfigFile "${Launcher_APP_BINARY_NAME}.cfg" PARENT_SCOPE)
 set(Launcher_AppID "${Launcher_AppID}" PARENT_SCOPE)
 set(Launcher_SVGFileName "${Launcher_SVGFileName}" PARENT_SCOPE)
@@ -40,7 +43,7 @@ set(Launcher_Branding_ICO "program_info/${Launcher_APP_BINARY_NAME}.ico")
 set(Launcher_Branding_ICO "${Launcher_Branding_ICO}" PARENT_SCOPE)
 set(Launcher_Branding_WindowsRC "program_info/${Launcher_APP_BINARY_NAME}.rc" PARENT_SCOPE)
 set(Launcher_Branding_LogoQRC "program_info/${Launcher_APP_BINARY_NAME}.qrc" PARENT_SCOPE)
-set(Launcher_Authors "MultiMC & Prism Launcher Contributors")
+set(Launcher_Authors "Furawwncher & Prism Launcher Contributors")
 
 set(Launcher_Portable_File "program_info/portable.txt" PARENT_SCOPE)
 
@@ -67,10 +70,10 @@ Section "Visual Studio Runtime"
     NScurl::http GET "https://aka.ms/vs/17/release/$vc_redist_exe" "$INSTDIR\vc_redist\$vc_redist_exe" /INSIST /CANCEL /Zone.Identifier /END
     Pop $0
     ${If} $0 == "OK"
-        DetailPrint "Download successful"
+        DetailPrint "Download successful :D"
         ExecWait "$INSTDIR\vc_redist\$vc_redist_exe /install /passive /norestart"
     ${Else}
-        DetailPrint "Download failed with error $0"
+        DetailPrint "Download failed with error $0 :("
     ${EndIf}
 SectionEnd
 !endif
